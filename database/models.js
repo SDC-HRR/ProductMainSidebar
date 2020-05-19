@@ -106,7 +106,7 @@ const getOne = (query, callback) => {
     } else {
       callback(null, res);
       // console.log(res);
-      console.log('getOne success');
+      console.log('getOne success:' + query);
     }
   });
 };
