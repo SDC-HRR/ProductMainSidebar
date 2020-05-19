@@ -1,5 +1,6 @@
-node_modules
+node_modules/
 *.DS_Store
 webpack.config
 coverage/
 node_modules
+public/bundle.js
