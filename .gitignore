@@ -5,3 +5,4 @@ coverage/
 node_modules
 public/bundle.js
 package-lock.json
+public/app.js.map
