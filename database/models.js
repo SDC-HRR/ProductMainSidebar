@@ -99,17 +99,53 @@ const Game = mongoose.model('Game', gameSchema);
 
 // METHODS
 const getOne = (query, callback) => {
-  Game.find({ proxyId: query }).exec((err, res) => {
+  Game.find(query).exec((err, res) => {
     if (err) {
       // console.log("error in getOne");
-      throw err;
+      callback(err);
     } else {
       callback(null, res);
       // console.log(res);
-      console.log('getOne success:' + query);
+      console.log('getOne success:' + JSON.stringify(query));
     }
   });
 };
 
-module.exports.getOne = getOne;
-module.exports.Game = Game;
+const saveOne = (data, callback) => {
+  const newGame = new Game(data);
+  newGame.save((err) => {
+    if (err) {
+      callback(err);
+    } else {
+      console.log('saveOne success');
+      callback();
+    }
+  });
+};
+
+const changeOne = ({ id, body }, callback) => {
+  const filter = { proxyId: id };
+  Game.updateOne(filter, body, (err) => {
+    if (err) {
+      callback(err);
+    } else {
+      console.log('changeOne success');
+      callback();
+    }
+  });
+};
+
+const deleteOne = (filter, callback) => {
+  Game.deleteOne(filter, (err) => {
+    if (err) {
+      callback(err);
+    } else {
+      console.log('deleteOne success');
+      callback();
+    }
+  });
+};
+
+module.exports = {
+  getOne, saveOne, changeOne, deleteOne, Game,
+};

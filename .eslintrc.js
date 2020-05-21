@@ -17,9 +17,6 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    "react/prop-types": 0,
-    "react/destructuring-assignment": 0,
-    "import/extensions": 0,
-    "jsx-a11y/alt-text": 0,
+    "no-console": 0,
   },
 };
