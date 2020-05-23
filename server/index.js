@@ -33,7 +33,7 @@ app.post('/mainbody/:id', ({ body }, res) => {
   });
 });
 
-app.patch('/mainbody/:id', ({ body, params: { id } }, res) => {
+app.put('/mainbody/:id', ({ body, params: { id } }, res) => {
   const changeData = { id, body };
   console.log(JSON.stringify(changeData));
   models.changeOne(changeData, (err) => {
