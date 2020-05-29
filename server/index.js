@@ -21,44 +21,44 @@ app.get('/mainbody/:id', ({ params }, res) => {
   });
 });
 
-app.post('/mainbody/:id', ({ body }, res) => {
-  models.saveOne(body, (err) => {
-    if (err) {
-      // console.log('error: ', err);
-      res.sendStatus(404);
-    } else {
-      // console.log('returned data: ', data);
-      res.sendStatus(200);
-    }
-  });
-});
+// app.post('/mainbody/:id', ({ body }, res) => {
+//   models.saveOne(body, (err) => {
+//     if (err) {
+//       // console.log('error: ', err);
+//       res.sendStatus(404);
+//     } else {
+//       // console.log('returned data: ', data);
+//       res.sendStatus(200);
+//     }
+//   });
+// });
 
-app.put('/mainbody/:id', ({ body, params: { id } }, res) => {
-  const changeData = { id, body };
-  console.log(JSON.stringify(changeData));
-  models.changeOne(changeData, (err) => {
-    if (err) {
-      // console.log('error: ', err);
-      res.sendStatus(404);
-    } else {
-      // console.log('returned data: ', data);
-      res.sendStatus(200);
-    }
-  });
-});
+// app.put('/mainbody/:id', ({ body, params: { id } }, res) => {
+//   const changeData = { id, body };
+//   console.log(JSON.stringify(changeData));
+//   models.changeOne(changeData, (err) => {
+//     if (err) {
+//       // console.log('error: ', err);
+//       res.sendStatus(404);
+//     } else {
+//       // console.log('returned data: ', data);
+//       res.sendStatus(200);
+//     }
+//   });
+// });
 
-app.delete('/mainbody/:id', ({ params: { id } }, res) => {
-  const deleteId = { proxyId: id };
-  console.log(JSON.stringify(deleteId));
-  models.deleteOne(deleteId, (err) => {
-    if (err) {
-      // console.log('error: ', err);
-      res.sendStatus(404);
-    } else {
-      // console.log('returned data: ', data);
-      res.sendStatus(200);
-    }
-  });
-});
+// app.delete('/mainbody/:id', ({ params: { id } }, res) => {
+//   const deleteId = { proxyId: id };
+//   console.log(JSON.stringify(deleteId));
+//   models.deleteOne(deleteId, (err) => {
+//     if (err) {
+//       // console.log('error: ', err);
+//       res.sendStatus(404);
+//     } else {
+//       // console.log('returned data: ', data);
+//       res.sendStatus(200);
+//     }
+//   });
+// });
 
 module.exports = app;
