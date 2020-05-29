@@ -1,5 +1,5 @@
 const express = require('express');
-const models = require('../database/models.js');
+const db = require('../database/postgres.js');
 
 const app = express();
 
@@ -10,10 +10,10 @@ app.use(express.json());
 app.get('/mainbody/:id', ({ params }, res) => {
   const { id } = params;
   // console.log('query is : ', query);
-  models.getOne({ proxyId: id }, (err, data) => {
+  db.getOne(id, (err, data) => {
     if (err) {
       // console.log('error: ', err);
-      res.snedStatus(404);
+      res.sendStatus(404);
     } else {
       // console.log('returned data: ', data);
       res.status(200).send(data);

@@ -19,7 +19,7 @@ import {
 const Mainbody = (props) => {
   // console.log('mainbody props: ', props);
   const { description } = props.mainbodydata;
-  const matureContent = props.mainbodydata.maturecontent[0].description.join(
+  const matureContent = props.mainbodydata.maturecontent.description.join(
     ", "
   );
   const os = props.mainbodydata.sysrequirement.os.join(", ");
