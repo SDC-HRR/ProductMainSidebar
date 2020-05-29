@@ -1,5 +1,16 @@
-node_modules
+node_modules/
 *.DS_Store
 webpack.config
 coverage/
 node_modules
+public/bundle.js
+package-lock.json
+public/app.js.map
+database/datajson.csv
+database/cs-schema.cql
+database/pg-schema.cql
+database/postgre copy.js
+database/seedcsv.js
+database/seedscript.js
+database/models.js
+database/config.js

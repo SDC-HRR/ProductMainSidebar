@@ -30,80 +30,80 @@ const Languages = (props) => {
         <tbody>
           <tr>
             <LanguageEach>English</LanguageEach>
-            {props.languages.English.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.English.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr>
             <LanguageEach>French</LanguageEach>
-            {props.languages.French.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.French.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr>
             <LanguageEach>German</LanguageEach>
-            {props.languages.German.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.German.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr>
             <LanguageEach>Japanese</LanguageEach>
-            {props.languages.Japanese.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.Japanese.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr>
             <LanguageEach>Korean</LanguageEach>
-            {props.languages.Korean.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.Korean.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Russian</LanguageEach>
-            {props.languages.Russian.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.Russian.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Simplified-Chinese</LanguageEach>
-            {props.languages.SimplifiedChinese.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.SimplifiedChinese.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Spanish-Latin America</LanguageEach>
-            {props.languages.SpanishLatinAmerica.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.SpanishLatinAmerica.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Spanish-Spain</LanguageEach>
-            {props.languages.SpanishSpain.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.SpanishSpain.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Traditional-Chinese</LanguageEach>
-            {props.languages.TraditionalChinese.map((item) => (
-              <LanguagesCheckMark key={item}>
+            {props.languages.TraditionalChinese.map((item, index) => (
+              <LanguagesCheckMark key={index.toString()}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}

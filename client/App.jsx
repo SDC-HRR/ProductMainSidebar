@@ -19,11 +19,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get("/mainbody", {
-        params: {
-          _id: proxyId,
-        },
-      })
+      .get(`/mainbody/${proxyId}`)
       .then((res) => {
         // console.log("before setState: ", this.state);
         this.setState({
