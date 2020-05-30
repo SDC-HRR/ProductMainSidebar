@@ -14,4 +14,6 @@ database/seedcsv.js
 database/seedscript.js
 database/models.js
 database/config.js
-
+database/pg-schema.sql
+database/postgres copy.js
+newrelic_agent.log
