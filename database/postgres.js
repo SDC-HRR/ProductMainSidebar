@@ -16,7 +16,7 @@ db.one('SELECT $1 AS value', 'Postgres connected on port 5432')
 const getOne = (id, callback) => {
   db.one('SELECT game FROM games WHERE proxyid=$1', id)
     .then((data) => {
-      client.set(id, JSON.stringify(data));
+      client.set(id, JSON.stringify(JSON.parse(data)));
       callback(null, [data.game[0]]);
     })
     .catch((err) => {
