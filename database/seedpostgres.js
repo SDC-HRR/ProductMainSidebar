@@ -107,7 +107,7 @@ const xTags = [];
 for (let p = 0; p < Math.floor(Math.random() * 10); p += 1) {
   xTags.push(allTags[Math.floor(Math.random() * allTags.length)]);
 }
-const headings = 'proxyid|game_object\n';
+// const headings = 'proxyid|game_object\n';
 
 function saveInfo() {
   // fs.appendFileSync('./database/data2.csv', headings);
